@@ -60,5 +60,5 @@ class DarkThemeColorPalette extends ColorPalette {
   Color get surface => Color(0xFF161A1D);
 
   @override
-  Color get onSurface => Color(0xFFE0FEF2);
+  Color get onSurface => Color.fromARGB(255, 244, 255, 250);
 }
