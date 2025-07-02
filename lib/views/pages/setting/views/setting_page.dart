@@ -46,7 +46,12 @@ class SettingPage extends StatelessWidget {
                     iconData: Icons.light_mode,
                     value: ThemeMode.light,
                     groupValue: themeModeController.themeMode,
-                    onChanged: themeModeController.onThemeChanged,
+                    onChanged: (value) {
+                      themeModeController.onThemeChanged(
+                        context,
+                        ThemeMode.light,
+                      );
+                    },
                   ),
                   Gap(22),
                   RedioBtnCard<ThemeMode>(
@@ -54,7 +59,12 @@ class SettingPage extends StatelessWidget {
                     iconData: Icons.dark_mode,
                     value: ThemeMode.dark,
                     groupValue: themeModeController.themeMode,
-                    onChanged: themeModeController.onThemeChanged,
+                    onChanged: (value) {
+                      themeModeController.onThemeChanged(
+                        context,
+                        ThemeMode.dark,
+                      );
+                    },
                   ),
                   Gap(22),
                   RedioBtnCard<ThemeMode>(
@@ -62,7 +72,12 @@ class SettingPage extends StatelessWidget {
                     iconData: Icons.computer,
                     value: ThemeMode.system,
                     groupValue: themeModeController.themeMode,
-                    onChanged: themeModeController.onThemeChanged,
+                    onChanged: (value) {
+                      themeModeController.onThemeChanged(
+                        context,
+                        ThemeMode.system,
+                      );
+                    },
                   ),
                 ],
               ),

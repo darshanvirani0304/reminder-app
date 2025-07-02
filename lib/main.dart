@@ -9,7 +9,6 @@ import 'package:reminder/db/db_helper.dart';
 import 'package:reminder/db/reminder_db.dart';
 import 'package:reminder/services/services.dart';
 import 'package:reminder/shared/constant/constant.dart';
-import 'package:reminder/shared/extensions/extensions.dart';
 import 'package:reminder/shared/utils/permission_heandler.dart';
 import 'package:reminder/views/pages/pages.dart';
 import 'package:timezone/data/latest.dart' as tz;
@@ -34,15 +33,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-      SystemUiOverlayStyle(
-        statusBarColor: Colors.black.withValues(alpha: 0.5),
-        statusBarBrightness: context.isDark ? Brightness.dark : Brightness.light,
-        statusBarIconBrightness: context.isDark ? Brightness.light : Brightness.dark,
-        systemNavigationBarColor: Color(0xFF161A1D)
-      )
-    );
-
     return Consumer<ThemeModeController>(
       builder: (context, themeModeController, child) {
         ScreenUtil.init(
